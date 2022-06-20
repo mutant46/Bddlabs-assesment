@@ -31,7 +31,7 @@ const Index = ({ item }) => {
       const mins = x[1].split(":")[1];
       const AmOrPm = hours >= 12 ? "pm" : "am";
       const formated_h = hours % 12 || 12;
-      return `${date} ${hours}:${mins} ${AmOrPm}`;
+      return `${date} / ${formated_h}:${mins} ${AmOrPm}`;
     }
     return "None";
   };
