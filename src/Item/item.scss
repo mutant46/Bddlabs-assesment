@@ -1,0 +1,144 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.object-name {
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: $bg-seconday;
+  color: white;
+}
+
+.table__wrapper {
+  overflow: auto;
+  border-radius: $cured-edges;
+  font-size: 0.9rem;
+  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  table {
+    width: 100%;
+    background-color: white;
+
+    thead {
+      background-color: $bg-primary;
+      color: white;
+    }
+
+    td,
+    th {
+      padding: 1.1rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    /* Foreground */
+    background: $scrollbar-thumb-color;
+
+    border-radius: $cured-edges;
+  }
+  &::-webkit-scrollbar-track {
+    /* Background */
+    background: $scrollbar-track-color;
+    border-bottom-left-radius: $cured-edges;
+    border-bottom-right-radius: $cured-edges;
+  }
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    width: 48%;
+    background: white;
+    border-radius: $cured-edges;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+    margin: 1rem 0rem;
+  }
+  h3 {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: $bg-seconday;
+    color: white;
+    border-top-left-radius: $cured-edges;
+    border-top-right-radius: $cured-edges;
+  }
+
+  .details {
+    padding: 1rem 0rem 0rem;
+    span {
+      font-weight: bold;
+    }
+    p {
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  @include tablet {
+    .box__item {
+      width: 100%;
+    }
+  }
+}
+
+.pipelines {
+  h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+  }
+
+  .table__wrapper {
+    margin-bottom: 4rem;
+    border-radius: 0;
+  }
+
+  .param__info {
+    border-top-left-radius: $cured-edges;
+    border-top-right-radius: $cured-edges;
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+
+    h3 {
+      font-family: sans-serif;
+      padding-bottom: 0.75rem;
+      text-align: center;
+      border-bottom: 1px solid $bg-primary;
+    }
+  }
+
+  .extra__info {
+    margin-bottom: 0;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem 0rem;
+    flex-wrap: wrap;
+
+    p {
+      background-color: #e5e8e8;
+      padding: 0.7rem 2.2rem;
+      border-radius: 20px;
+      margin-right: 1rem;
+      font-weight: bold;
+      color: rgb(56, 56, 56);
+    }
+
+    span {
+      color: black;
+    }
+  }
+}
+
+.param-row:nth-child(even) {
+  background-color: lightgray;
+}
